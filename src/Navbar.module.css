@@ -1,0 +1,455 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: 'Abhaya Libre', serif; 
+    }
+    
+
+    .main_container{
+        background-color: rgba(255, 255, 255, 0.96);
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        background-color: white;
+    }
+
+    .links{
+        display: flex;
+        margin: 13px auto;
+        font-family: 'Abhaya Libre', serif;
+    }
+
+    .links ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+  
+    .links a {
+        font-size: 22px;
+        margin: 0 15px;
+        padding: 15px 0 5px;
+        font-weight: bolder;
+        text-decoration: none; 
+        color: #093E5E;
+        position: relative; 
+        display: inline-block;
+    }
+  
+    .links a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 5px;
+        border-radius: 10px;
+        background-color: #05FE9F;
+        transition: width 0.3s ease;
+    }
+  
+    .links a:hover::after {
+        width: 100%;
+    }
+
+    .logo, .footer_logo img{
+        width: 60px;
+        height: 60px;
+    }
+
+    nav h1{
+        font-size: 40px;
+        color: #093E5E;
+        display: inline-block;
+        padding: 10px 10px 0;
+        font-weight: 900;
+    }
+
+    .main_content .content{
+        padding: 30px 30px 0;
+        display: flex;
+        flex-direction: row;
+        font-family: 'Abhaya Libre', serif;  
+
+    }
+
+    .main_content .content h1{
+        font-size: 57px;
+        padding-top: 50px;
+        font-weight: 800;
+    }
+
+    .main_content .content span{
+        background: linear-gradient(90deg, #05FE9F 0%, #23BDBB 50%, #178280 75%, #2297CE 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+    }
+
+    .main_content .content p{
+        font-size: 20px;
+        color: black;
+        padding: 10px
+    }
+
+    .main_content .content .home_image{
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main_content .content .home_image img{
+        max-width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .main_content .content .left_content{
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .main_content .content button{
+        padding: 14px 17px;
+        border: none;
+        margin: 10px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #1A8059 0%, #1C7B57 17%, #1E7956 25%, #1F7755 29%, #1F7655 33%, #178280 67%, #0F5F67 100% );
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-left: 30px;
+        cursor: pointer;
+        font-family: 'Abhaya Libre', serif;
+    }
+
+    .main_content .content .consultation{
+        background: linear-gradient(90deg, #1A8059 0%, #1C7B57 17%, #1E7956 25%, #1F7755 29%, #1F7655 33%, #178280 67%, #0F5F67 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        background-clip: text;
+        color: transparent;
+        border:2px solid  #178280; 
+    }
+
+
+    .groups{
+        display : flex;
+        flex-direction: column;
+        padding:  30px  40px;
+        font-family: 'Abhaya Libre', serif;
+    }
+
+    .groups h2{
+        font-size: 45px;
+        font-weight: bolder;
+    }
+
+    .groups p{
+        font-size: 18px;
+        color: #444;
+    }
+
+
+    .next_content{
+        margin-top: 100px;
+    }
+
+    .next_content h1{
+        text-align: center;
+        font-size: 45px;
+        color: #0D7B51;
+        font-weight: 700;
+    }
+
+    .next_content p{
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .next_content .cards{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; 
+        gap: 50px;
+        padding-top: 40px;
+        font-family: 'Abhaya Libre', serif;
+    }
+
+    .next_content .cards .card1, .next_content .cards .card2{
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        background-color: rgba(23,167,134,0.2);
+        border-radius: 20px;
+    }
+
+    .next_content .cards .card1{
+        padding: 42px 70px
+    }
+
+    .next_content .card1 h2{
+        text-align:  center;
+        font-size: 35px;
+        font-weight:900;
+        padding-bottom: 12px;
+    }
+
+
+    .next_content .card2 h2{
+        font-size: 35px;
+        font-weight: 900;
+    }
+
+    .next_content .card2 h3{
+        text-align: center;
+        font-size: 22px;
+        color: #343333;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .next_content .card1 h4{
+        font-size: 22px;
+        font-weight: 600;
+        padding-top: 10px;
+        padding-right: 50px;
+    }
+
+    .next_content .card1 p{
+        padding-top: 15px;
+        font-weight: 900;
+    }
+
+    .next_content .card2 h1{
+        padding-top: 10px;
+    }
+
+    .next_content .cards .card1 span{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .progress_bar {
+        width: 100%;
+        height: 12px;
+        background-color: #ffffff;
+        border-radius: 50px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+  
+    .progress_fill {
+        height: 100%;
+        background-color: #17a673;
+        border-radius: 50px;
+        transition: width 0.4s ease;
+    }
+
+    .icon_title_row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px; 
+    }
+    
+    .other_cards{
+        display: flex;
+        align_items: center;
+        justify-content:center;
+        padding: 30px;
+    }
+
+    .other_cards .othercard{
+        width: 300px;
+        height: 24d0px;
+        display: flex;
+        flex-direction: column;
+        margin:20px;
+        padding: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+    }
+
+    .other_cards .othercard span{
+        width: 50px;
+        height: 50px;
+        background-color: rgba(23,167,134,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        color:#17a673;
+        font-size: 30px;
+    }
+
+    .other_cards .othercard h2{
+        text-align: center;
+        font-weight: 900;
+        margin-top: 10px;
+    }
+
+    .other_cards .othercard p{
+        margin-top: 10px;
+        color: grey;
+    }
+
+    .other_cards .othercard a{
+        color: #0062FF;
+        font-weight:600;
+        font-size: 17px;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+    .other_cards .othercard a:hover{
+        transform: scale(1.02);
+    }
+
+    input{
+        font-family: 'Abhaya Libre', serif; 
+    }
+
+    textarea{
+        font-family: 'Abhaya Libre', serif;
+    }
+
+    .jumbotron{
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(90deg, #1A8059 0%, #1C7B57 17%, #1E7956 25%, #1F7755 29%, #1F7655 33%, #178280 67%, #0F5F67 100% );
+        padding: 30px;
+    }
+
+    .jumbotron h1{
+        text-align: center;
+        font-size: 40px;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .jumbotron p{
+        font-size: 20px;
+        text-align: center;
+        color: rgb(232, 232, 232);
+        margin-top: 20px;
+    }
+
+    .jumbotron .buttons{
+        display: flex;
+        flex-direction: row;
+        margin: 30px auto;
+    }
+
+    .jumbotron button{
+        padding: 14px 17px;
+        border: none;
+        margin: 10px;
+        border-radius: 10px;
+        background-color: white;
+        color:#17a673;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: 'Abhaya Libre', serif;
+    }
+
+    .footer_logo{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer_logo h1{
+        font-size: 40px;
+        color: #093E5E;
+        display: inline-block;
+        padding: 10px 10px 0;
+    }
+    
+    footer{
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+    }
+
+    footer .descri{
+        position: absolute;
+        font-size: 18px;
+        color: #707070;
+        margin: 100px 20px 10px ;
+        font-weight: 600;
+    }
+
+    footer ul{
+        list-style: none;
+        cursor: pointer;
+    }
+
+    footer .platform, footer .support, footer .connect{
+        padding: 20px 0 20px 150px;
+
+    }
+
+    footer .platform ul, footer .support ul, .connect ul{
+        font-size: 18px;
+        font-weight: 700;
+        color: #494949;
+    }
+
+    .platform h2, .support h2, .connect h2{
+        font-size: 30px;
+        font-weight: 900;
+        margin-bottom:  20px ;
+    }
+
+    .platform ul li, .support ul li, .connect ul li{
+        padding: 7px;
+        font-size: 18px;
+    }
+
+    .connect ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .connect ul li{
+        font-size: 23px;
+    }
+
+    .connect ul li a {
+        color: #494949;
+        transition: color 0.3s ease;
+    }
+
+    .connect ul li a:hover {
+        color:#17a673; 
+    }
+
+    .rights {
+        width: 100%;
+        text-align: center;
+        padding: 24px 0 16px 0;
+        margin-top: auto;
+        background: linear-gradient(90deg, #8fddc2 0%, #e6f4f1 100%);
+    }
+    
+    .rights p {
+        font-size: 18px;
+        color: #178280;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        font-family: 'Abhaya Libre', serif;
+    }
+
+
+            

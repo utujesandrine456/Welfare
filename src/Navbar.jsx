@@ -15,6 +15,7 @@ import { FaLinkedin } from "react-icons/fa";
 import Fitness from './assets/Fitness.png'
 import Nutrition from './assets/Nutrition.png';
 import Mental from './assets/Mental.png';
+import {Link } from 'react-router-dom';
 
 
 function Navbar(){
@@ -40,7 +41,7 @@ function Navbar(){
                         <div className={styles.left_content} >
                             <h1>Your Health, <span>Simplified</span></h1>
                             <p>Take control of your wellness journey with our <br></br>comprehensive health platform. Track, manage, and <br></br>improve your health with expert guidance.</p>
-                            <button className={styles.start} >Get Started Free</button>
+                            <button className={styles.start} ><Link to='/signup'>Get Started Free</Link></button>
                             <button className={styles.consultation} >Book Consultation</button>
                             <div style={{display: 'flex', flexDirection: 'row'}}>
                                 <Titles title="50K+" name="Active Users" />
@@ -193,10 +194,10 @@ function Nextcontent(){
             <div style={{ backgroundColor: 'rgba(222, 237, 228, 0.8)', padding: '50px 0 70px 0', minHeight: '400px' }} className={styles.Questions}>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', gap: '60px', flexWrap: 'wrap' }}>
                     <div style={{ flex: 1, minWidth: '350px', maxWidth: '650px' }}>
-                        <h2 style={{ textAlign: 'center', color: '#0D7B51',  fontSize: '2.7rem', marginBottom: '30px', fontWeight: 'bold' }}>
-                            Maybe Your Question Is One Of These.
+                        <h2 style={{ textAlign: 'center', color: '#0D7B51', fontSize: '2.7rem', marginBottom: '30px', fontWeight: 'bold' }}>
+                            Maybe Your Question Is One Of These.
                         </h2>
-                        <p style={{ textAlign: 'center', color: 'grey',  fontSize: '1.2rem', marginBottom: '50px'}}>Find answers to commonly asked questions about our products and services here. Can't find what you're looking for? Feel free to reach out to us for personalized assistance.</p>
+                        <p style={{ textAlign: 'center', color: 'grey', fontSize: '1.2rem', marginBottom: '50px'}}>Find answers to commonly asked questions about our products and services here. Can't find what you're looking for? Feel free to reach out to us for personalized assistance.</p>
                         <FAQList />
                     </div>
                 </div>

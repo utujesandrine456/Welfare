@@ -52,7 +52,7 @@
         width: 0;
         height: 5px;
         border-radius: 10px;
-        background-color: #05FE9F;
+        background-color: #29a978;
         transition: width 0.3s ease;
     }
   
@@ -294,6 +294,7 @@
 
     .other_cards .othercard h2{
         text-align: center;
+        font-size: 25px;
         font-weight: 900;
         margin-top: 10px;
     }
@@ -336,6 +337,7 @@
         font-size: 40px;
         color: white;
         margin-top: 20px;
+        font-weight: 800;
     }
 
     .jumbotron p{
@@ -374,6 +376,7 @@
         color: #093E5E;
         display: inline-block;
         padding: 10px 10px 0;
+        font-weight: 900;
     }
     
     footer{
@@ -449,6 +452,32 @@
         font-weight: 700;
         letter-spacing: 0.5px;
         font-family: 'Abhaya Libre', serif;
+    }
+
+
+    .health{
+        display : flex;
+        flex-direction: row;
+        margin: 30px auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .how{
+        padding: 25px;
+    }
+
+    .how h2{
+        font-size: 30px;
+        font-weight: 900;
+        text-align: center;
+        padding: 10px;
+        color: #093925;
+    }
+
+    .how img{
+        width: 250px;
+        height: 270px;
     }
 
 

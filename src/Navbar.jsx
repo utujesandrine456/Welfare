@@ -207,7 +207,7 @@ function Nextcontent(){
                 <h1>Ready To Transform Your Health Journey?</h1>
                 <p>Join thousands of users who have taken control of their health <br></br> with our comprehensive platform.</p>
                 <div className={styles.buttons}>
-                    <button>Start Free Trial</button>
+                    <button><Link to='/signup'>Start Free Trial</Link></button>
                     <button>Schedule Demo</button>
                 </div>
             </div>

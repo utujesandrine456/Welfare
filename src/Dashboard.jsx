@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { FaHeartbeat, FaChartBar, FaUser, FaCog, FaSignOutAlt, FaSearch, FaBell } from 'react-icons/fa';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import './App.css';
@@ -13,16 +13,34 @@ const data = [
   { name: 'Mon', uv: 400, pv: 2400, amt: 2400 },
   { name: 'Tue', uv: 300, pv: 1398, amt: 2210 },
   { name: 'Wed', uv: 200, pv: 9800, amt: 2290 },
-  { name: 'Thu', uv: 678, pv: 3908, amt: 2000 },
-  { name: 'Fri', uv: 489, pv: 4800, amt: 2181 },
-  { name: 'Sat', uv: 239, pv: 3800, amt: 2500 },
-  { name: 'Sun', uv: 349, pv: 4300, amt: 2100 },
+  { name: 'Thu', uv: 750, pv: 4300, amt: 2100 },
+  { name: 'Fri', uv: 500, pv: 3908, amt: 2000 },
+  { name: 'Sat', uv: 250, pv: 4800, amt: 2181 },
+  { name: 'Sun', uv: 400, pv: 3800, amt: 2500 },
 ];
 
 const Dashboard = () => {
 
   const [activeTab, setActiveTab] = React.useState('dashboard');
   const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+
+    const token = localStorage.getItem('token');
+    const userData = JSON.parse(localStorage.getItem('user'));
+
+    if(!token){
+      navigate('/login');
+    }else{
+      if(userData){
+        setUser(userData)
+      }else{
+        navigate('/login');
+      }
+    }
+  }, [navigate]);
+  
 
   const handleLogout = async () => {
 
@@ -30,9 +48,8 @@ const Dashboard = () => {
       
       localStorage.removeItem('token');
 
-      const res = await axios.post('http://localhost:3000/api/auth/logout', {
-        method: 'POST',
-        credentials: 'include',
+      const res = await axios.post('http://localhost:3000/api/auth/logout', {}, {
+        withCredentials: true, 
       });
 
       if(res.data.ok){
@@ -46,6 +63,7 @@ const Dashboard = () => {
     }
 
   }
+
 
 
   return (
@@ -117,7 +135,7 @@ const Dashboard = () => {
               
               <div className="col-span-1 bg-[#232946]/80 rounded-2xl p-4 shadow-lg">
                 <div className="text-[#29a978] mb-5 text-3xl font-bold ">Metrics</div>
-                  <ResponsiveContainer width="100%" height={120}>
+                  <ResponsiveContainer width="100%" height={180}>
                     <LineChart data={data}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#2d3748" />
                       <XAxis dataKey="name" stroke="#a0aec0" fontSize={14} />
@@ -250,8 +268,8 @@ const Dashboard = () => {
                   UUS
                 </div>
                 <div className="flex-1">
-                  <div className="text-white text-2xl font-semibold">UWASE UTUJE Sandrine</div>
-                  <div className="text-gray-400 text-sm">utujesandrine456@gmail.com</div>
+                  <div className="text-white text-2xl font-semibold">{user.username}</div>
+                  <div className="text-gray-400 text-sm">{user.email}</div>
                   <div className="text-gray-400 text-normal mt-1 font-semibold">Member</div>
                   <div className="flex gap-4 mt-4">
                     <div className="bg-[#1a1a2e] px-3 py-1 rounded-full text-sm text-green-400">Active</div>

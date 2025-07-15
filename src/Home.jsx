@@ -1,5 +1,5 @@
 import React from 'react';
-import { Content, Navbar, Nextcontent, Titles } from './Navbar';
+import { Content, Navbar, Nextcontent } from './Navbar';
 
 
 function Home(){

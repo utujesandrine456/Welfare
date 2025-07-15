@@ -4,6 +4,7 @@ import Login_image from './assets/Login.png';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/ReactToastify.css';
+import { stringify } from 'postcss';
 
 const Login = () => {
 
@@ -23,10 +24,19 @@ const Login = () => {
     }
   
     try{
-      const res = await axios.post('http://localhost:3000/api/auth/login', form);
+      const res = await axios.post('http://localhost:3000/api/auth/login', form, {
+        withCredentials: true,
+      });
+
       toast.success(res.data.message);
-      localStorage.setItem('token', res.data.message);
+
+      const {token, existuser } = res.data;
+
+      localStorage.setItem('token', token);
+      localStorage.setItem('user', JSON.stringify(existuser))
+
       navigate('/dashboard');
+
     }catch(err){
       toast.error(err.response?.data?.message || "Login Failed !!");
     }
@@ -34,6 +44,8 @@ const Login = () => {
   }
   
 return (
+  <>
+  <ToastContainer />
     <div className="flex flex-col md:flex-row w-full min-h-screen h-full">
       <div className="flex-1 flex items-center justify-center bg-white p-4">
         <form className="w-full max-w-md bg-white rounded-lg p-6" onSubmit={handleSubmit}>
@@ -94,6 +106,7 @@ return (
         />
       </div>
     </div>
+  </>
   );
 };
 
